@@ -13,10 +13,15 @@ This API provides a range of detailed information about food produce. Including:
 - Fruit, Vegetable, Or Both?
 - And More...
 
-## Features
-[x] UI
-[ ] Front-end JavaScript
-[ ] Node.js based RESTful API
+## To-do
+- [ ] Front-end
+  - [x] UI
+  - [ ] JavaScript
+  - [ ] User Authentication
+- [ ] Back-end
+  - [ ] Node.js based RESTful API
+  - [ ] Produce Database
+- [ ] Hosting
 
 ## Preview
 ### Index
