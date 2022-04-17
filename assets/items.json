@@ -1,0 +1,46 @@
+{
+	"root": [
+		{
+			"name": ["Apple"],
+			"type": {
+				"Fruit": true,
+				"Vegetable": false
+			},
+			"monthsInSeason": {
+				"January": true,
+				"February": true,
+				"March": false,
+				"April": false,
+				"May": false,
+				"June": false,
+				"July": false,
+				"August": false,
+				"September": false,
+				"October": true,
+				"November": true,
+				"December": true
+			}
+		},
+		{
+			"name": ["Beetroot"],
+			"type": {
+				"Fruit": false,
+				"Vegetable": true
+			},
+			"monthsInSeason": {
+				"January": true,
+				"February": true,
+				"March": true,
+				"April": true,
+				"May": true,
+				"June": true,
+				"July": true,
+				"August": true,
+				"September": true,
+				"October": true,
+				"November": true,
+				"December": true
+			}
+		}
+	]
+}

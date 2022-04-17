@@ -1,0 +1,440 @@
+:root {
+  --color-primary: #ffc414;
+  --color-secondary: #F95738;
+  --color-tertiary: #1E91D6;
+  --color-text: #222222;
+  --color-background: #fff9e9;
+  --color-heading: #0D3B66;
+  --color-button: rgba(0, 0, 0, 0.1);
+  --color-gradient-spring: 45deg, #f6bd60, #f28482, #84a59d;
+  --color-gradient-summer: 45deg, #ff7b00, #ffb700, #ffea00;
+  --color-gradient-autumn: 45deg, #bc6c25, #839740, #4b7c14;
+  --color-gradient-winter: 45deg, #5a5ccf, #00b4d8, #7bd7ea;
+  --font-brand: "Futura", "Trebuchet MS", Arial, sans-serif;
+  --font-content: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  --global-margin: 1.5rem;
+}
+
+[data-theme="dark"] {
+  --color-primary: #FFC414;
+  --color-secondary: #F95738;
+  --color-text: #fff9e9;
+  --color-background: #222222;
+  --color-heading: #0D3B66;
+}
+
+body {
+  display: grid;
+  margin: 0;
+  font-family: var(--font-content);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  font-weight: 500;
+}
+
+h1 {
+  color: var(--color-heading);
+  font-family: var(--font-brand);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
+}
+
+p,
+input,
+label {
+  margin: 0.5rem;
+  font-family: var(--font-content);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* LOGO STYLING */
+.logo {
+  color: var(--color-primary);
+  font-family: var(--font-brand);
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.field-text {
+  border-radius: 5px;
+  border: none;
+  height: 2rem;
+}
+
+/* NAVIGATION BAR STYLING STARTS HERE */
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  height: 7.5vh;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--global-margin);
+}
+
+.nav-main,
+.nav-secondary {
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main__item,
+.nav-secondary__item {
+  color: var(--color-text);
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.navbar .left {
+  margin-right: auto;
+}
+
+.navbar .logo {
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+  line-height: 0;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* MAIN STYLING STARTS HERE */
+main {
+  /* margin: 1rem; */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* FOOTER STYLING STARTS HERE */
+.nav-secondary {
+  justify-content: center;
+}
+
+/* INDEX STYLING */
+.index {
+  padding: 20vh 0 0 0;
+  text-align: center;
+}
+
+.index .logo {
+  font-size: 3rem;
+  margin: 1rem;
+  padding: 0.25rem;
+}
+
+.search-box {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box input {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 3rem;
+  width: 30vw;
+  max-width: 30vw;
+  min-width: 400px;
+  border: solid 0.1rem var(--color-secondary);
+  border-radius: 1.5rem;
+  grid-area: 1 / 1 / 1 / 5;
+  text-align: center;
+}
+
+.icon-search {
+  grid-area: 1 / 1 / 1 / 1;
+  z-index: 1;
+  margin: 0 0 0 1.25rem;
+}
+
+.icon-clear {
+  grid-area: 1 / 4 / 1 / 4;
+  z-index: 1;
+  margin: 0 1.25rem 0 0;
+  visibility: hidden;
+}
+
+.button__inline {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  
+}
+
+.button input {
+  background-color: var(--color-button);
+  color: var(--color-text);
+  border: none;
+  border-radius: 3px;
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+
+/* ABOUT PAGE GENERIC STYLING */
+.about h1 {
+  padding: 0 0 0.5rem 0;
+}
+
+.about p {
+  width: 35vw;
+  padding: 0 0 0.5rem 0;
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.about a {
+  font-size: 1.25rem;
+}
+
+.about ul {
+  /* border: solid 1px red; */
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 40vw;
+  margin: 0;
+  padding: 0;
+}
+
+.about li {
+  background-color: var(--color-button);
+  padding: 0.75rem;
+  margin: 0.25rem;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+/* ABOUT HERO STYLING */
+main .hero {
+  padding: var(--global-margin);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.hero h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.hero h2 {
+  max-width: 40vw;
+  min-width: 400px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* ABOUT GOALS STYLING */
+.about .goals {
+  position: sticky;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: var(--global-margin);
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  background-image: linear-gradient(var(--color-gradient-spring));
+  height: 50vh;
+}
+
+.goals p {
+  color: var(--color-background);
+}
+
+.goals li {
+  color: var(--color-background);
+}
+
+/* ABOUT BELIEFS STYLING */
+main .beliefs {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: var(--global-margin);
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: var(--color-text);
+}
+
+.beliefs p {
+  color: var(--color-background);
+}
+
+.beliefs ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.beliefs li {
+  height: 1fr;
+  width: 50vw;
+  text-transform: none;
+  color: var(--color-background);
+}
+
+/* LOGIN / SIGN UP STYLING */
+.login,
+.signup {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  background-color: var(--color-tertiary);
+  background-image: linear-gradient(var(--color-gradient-winter));
+}
+
+.signup {
+  background-color: var(--color-primary);
+  background-image: linear-gradient(var(--color-gradient-summer));
+}
+
+.login__form,
+.signup__form {
+  display: flex;
+  justify-content: center;
+}
+
+.form___field {
+  align-content: center;
+  padding-top: 0.75rem;
+}
+
+.login h1 {
+  padding: 0.75rem;
+}
+
+.login .button,
+.signup .button {
+  padding: 0.75rem;
+}
+
+/* RESULT STYLING */
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result .button {
+  padding: 0.75rem;
+}
+
+/* COMBO STYLING */
+.center {
+  text-align: center;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-tertiary {
+  color: var(--color-tertiary);
+}
+
+.color-heading {
+  color: var(--color-heading);
+}
+
+.color-text {
+  color: var(--color-text);
+}
+
+.color-background {
+  color: var(--color-background);
+}
+
+.color-gradient-spring {
+  background: -webkit-linear-gradient(var(--color-gradient-spring));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-gradient-summer {
+  background: -webkit-linear-gradient(var(--color-gradient-summer));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-gradient-autumn {
+  background: -webkit-linear-gradient(var(--color-gradient-autumn));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-gradient-winter {
+  background: -webkit-linear-gradient(var(--color-gradient-winter));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

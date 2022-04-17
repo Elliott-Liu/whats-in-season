@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="assets/styles/styles.css" />
+		<title>What's In Season</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="assets/scripts/vendor.js" defer></script>
+		<script src="assets/scripts/app.js" defer></script>
+	</head>
+
+	<body>
+		<!-- HEADER -->
+		<header>
+			<nav class="navbar">
+				<ul class="nav-main">
+					<li class="nav-main__item left">
+						<a href="/about.html">About</a>
+					</li>
+					<li class="nav-main__item"><a href="/login.html">Login</a></li>
+					<li class="nav-main__item"><a href="/signup.html">Sign up</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- MAIN -->
+		<main class="index">
+			<h1 class="logo">What's In Season</h1>
+			<div>
+				<form action="/edit.html" method="get">
+					<div class="search-box">
+						<img
+							draggable="false"
+							class="icon-search"
+							src="/assets/img/icon-search.svg"
+						/>
+						<img
+							draggable="false"
+							class="icon-clear"
+							src="/assets/img/icon-clear.svg"
+						/>
+						<input
+							class="center"
+							type="search"
+							id="search-text"
+							name="Search"
+							placeholder="Search for fruit or vegetables..."
+							size="30"
+						/>
+					</div>
+					<div class="button__inline">
+						<div class="button">
+							<input
+								class="center"
+								type="button"
+								id="button-search"
+								value="Search"
+							/>
+						</div>
+						<div class="button">
+							<input
+								class="center"
+								type="button"
+								id="button-random"
+								value="I'm Feeling Lucky"
+							/>
+						</div>
+					</div>
+				</form>
+				<div>
+					<p>
+						<span id="you-searched" style="display: inline"
+							>Welcome to <strong>What's In Season</strong>!</span
+						>
+						<strong
+							><span id="search-result" style="display: inline"></span
+						></strong>
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<!-- FOOTER -->
+		<footer>
+			<nav class="navbar">
+				<ul class="nav-secondary">
+					<li class="nav-secondary__item">
+						<a href="result.html">Result</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
+	</body>
+</html>
